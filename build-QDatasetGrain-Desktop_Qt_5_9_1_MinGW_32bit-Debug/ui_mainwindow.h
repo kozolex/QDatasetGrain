@@ -13,9 +13,12 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -25,30 +28,51 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QWidget *centralWidget;
+    QPushButton *pushButtonLoad;
+    QListWidget *listWidgetFilesAdded;
+    QPushButton *pushButton;
+    QGraphicsView *graphicsViewMain;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
-    QWidget *centralWidget;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(400, 300);
+        MainWindow->resize(807, 553);
+        centralWidget = new QWidget(MainWindow);
+        centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        pushButtonLoad = new QPushButton(centralWidget);
+        pushButtonLoad->setObjectName(QStringLiteral("pushButtonLoad"));
+        pushButtonLoad->setGeometry(QRect(10, 0, 75, 23));
+        listWidgetFilesAdded = new QListWidget(centralWidget);
+        listWidgetFilesAdded->setObjectName(QStringLiteral("listWidgetFilesAdded"));
+        listWidgetFilesAdded->setGeometry(QRect(10, 30, 371, 461));
+        QFont font;
+        font.setPointSize(6);
+        listWidgetFilesAdded->setFont(font);
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(90, 0, 75, 23));
+        graphicsViewMain = new QGraphicsView(centralWidget);
+        graphicsViewMain->setObjectName(QStringLiteral("graphicsViewMain"));
+        graphicsViewMain->setGeometry(QRect(400, 30, 251, 461));
+        MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
+        menuBar->setGeometry(QRect(0, 0, 807, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        MainWindow->addToolBar(mainToolBar);
-        centralWidget = new QWidget(MainWindow);
-        centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        MainWindow->setCentralWidget(centralWidget);
+        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
+        QObject::connect(listWidgetFilesAdded, SIGNAL(itemClicked(QListWidgetItem*)), graphicsViewMain, SLOT(show()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -56,6 +80,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
+        pushButtonLoad->setText(QApplication::translate("MainWindow", "Load", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("MainWindow", "Clr List", Q_NULLPTR));
     } // retranslateUi
 
 };
