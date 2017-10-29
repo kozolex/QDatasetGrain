@@ -20,7 +20,7 @@ private slots:
 
     void on_pushButton_released();
 
-    void on_listWidgetFilesAdded_clicked(const QModelIndex &index);
+    void on_listWidgetFilesAdded_clicked();
 
 private:
     Ui::MainWindow *ui;

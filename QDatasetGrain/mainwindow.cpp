@@ -18,7 +18,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButtonLoad_released()
 {
-    QStringList filenames = QFileDialog::getOpenFileNames(this,tr("BMP files"),QDir::currentPath(),tr("Bitmap files (*.bmp);;All files (*.*)") );
+    QStringList filenames = QFileDialog::getOpenFileNames(this,tr("Image files"),QDir::currentPath(),tr("Images (*.png *.png *.jpg *.tif *.tiff);;All files (*.*)") );
     if( !filenames.isEmpty() )
     {
         for (int i =0;i<filenames.count();i++)
@@ -31,8 +31,17 @@ void MainWindow::on_pushButton_released()
     ui->listWidgetFilesAdded->clear();
 }
 
-void MainWindow::on_listWidgetFilesAdded_clicked(const QModelIndex &index)
+void MainWindow::on_listWidgetFilesAdded_clicked()
 {
-    QPixmap monPixmap(ui->listWidgetFilesAdded->item(index));
+    QGraphicsScene *graphic = new QGraphicsScene ( this);
+    QPixmap myPixmap;
+    ui->labelFileName->setText(ui->listWidgetFilesAdded->currentItem()->text());
+    if(!myPixmap.load(ui->listWidgetFilesAdded->currentItem()->text())){
+          qWarning("Failed to load");
+      }
+    myPixmap = myPixmap.scaledToWidth(ui->graphicsViewMain->width());
+    graphic -> addPixmap( myPixmap);
+    ui ->graphicsViewMain->setScene(graphic);
+
 
 }

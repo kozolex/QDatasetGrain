@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -33,6 +34,8 @@ public:
     QListWidget *listWidgetFilesAdded;
     QPushButton *pushButton;
     QGraphicsView *graphicsViewMain;
+    QLabel *label;
+    QLabel *labelFileName;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -59,6 +62,12 @@ public:
         graphicsViewMain = new QGraphicsView(centralWidget);
         graphicsViewMain->setObjectName(QStringLiteral("graphicsViewMain"));
         graphicsViewMain->setGeometry(QRect(400, 30, 251, 461));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(-80, 620, 47, 13));
+        labelFileName = new QLabel(centralWidget);
+        labelFileName->setObjectName(QStringLiteral("labelFileName"));
+        labelFileName->setGeometry(QRect(180, 10, 481, 16));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -72,7 +81,6 @@ public:
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
-        QObject::connect(listWidgetFilesAdded, SIGNAL(itemClicked(QListWidgetItem*)), graphicsViewMain, SLOT(show()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -82,6 +90,8 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
         pushButtonLoad->setText(QApplication::translate("MainWindow", "Load", Q_NULLPTR));
         pushButton->setText(QApplication::translate("MainWindow", "Clr List", Q_NULLPTR));
+        label->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
+        labelFileName->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
     } // retranslateUi
 
 };

@@ -463,11 +463,18 @@ debug/mainwindow.o: ../QDatasetGrain/mainwindow.cpp ../QDatasetGrain/mainwindow.
 		F:/Qt/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/QGraphicsView \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qgraphicsview.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtGui/qpainter.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtGui/qtextoption.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtGui/qpen.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qscrollarea.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qgraphicsscene.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/QHeaderView \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qheaderview.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qabstractitemview.h \
-		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
-		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtCore/qitemselectionmodel.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
@@ -480,14 +487,25 @@ debug/mainwindow.o: ../QDatasetGrain/mainwindow.cpp ../QDatasetGrain/mainwindow.
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qstyle.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qtabbar.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qrubberband.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/QListWidget \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qlistwidget.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qlistview.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/QMenuBar \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qmenubar.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qmenu.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/QPushButton \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/QStatusBar \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qstatusbar.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/QToolBar \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qtoolbar.h \
 		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/QWidget \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/QFileDialog \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qfiledialog.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtCore/qdir.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtCore/qfileinfo.h \
+		F:/Qt/5.9.1/mingw53_32/include/QtWidgets/qdialog.h \
 		F:/LIB/opencv_old/build/include/opencv2/highgui/highgui.hpp \
 		F:/LIB/opencv_old/build/include/opencv2/core/core.hpp \
 		F:/LIB/opencv_old/build/include/opencv2/core/types_c.h \

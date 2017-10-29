@@ -45,3 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.autosave
+*.o
+build-QDatasetGrain-Desktop_Qt_5_9_1_MinGW_32bit-Debug/debug/moc_mainwindow.cpp
+*.exe
+build-QDatasetGrain-Desktop_Qt_5_9_1_MinGW_32bit-Debug/Makefile.Debug
+*.Release
+build-QDatasetGrain-Desktop_Qt_5_9_1_MinGW_32bit-Debug/ui_mainwindow.h
